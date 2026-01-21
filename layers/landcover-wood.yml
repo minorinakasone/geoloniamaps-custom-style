@@ -14,7 +14,7 @@ paint:
       - - 5
         - '#f8f8fa'
       - - 8
-        - '#bce398'
+        - '#f8f8fa'
   fill-antialias:
     base: 1
     stops:
