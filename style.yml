@@ -1,4 +1,5 @@
 $name: Geolonia 
+$background: rgba(193,167,226, 1)
 
 # カスタマイズここまで
 
@@ -45,6 +46,4 @@ layers:
   - !!inc/file layers/nt-water-name-river.yml
   - !!inc/file layers/oc-airport.yml
   - !!inc/file layers/farmland.yml
-  - !!inc/file layers/landuse-commercial.yml
-  - !!inc/file layers/landuse-industrial.yml
-  - !!inc/file layers/park.yml
+  
