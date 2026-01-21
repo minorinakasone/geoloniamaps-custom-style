@@ -10,7 +10,7 @@ filter:
 layout:
   visibility: visible
 paint:
-  line-color: '#bce398'
+  line-color: '#f8f8fa'
   line-width: 5
   line-translate:
     stops:

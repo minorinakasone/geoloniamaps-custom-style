@@ -12,7 +12,7 @@ paint:
   fill-color:
     stops:
       - - 5
-        - '#a5d47b'
+        - '#f8f8fa'
       - - 8
         - '#bce398'
   fill-antialias:

@@ -1,5 +1,4 @@
 $name: Geolonia 
-$background: rgba(193,167,226, 1)
 
 # カスタマイズここまで
 
@@ -49,8 +48,3 @@ layers:
   - !!inc/file layers/landuse-commercial.yml
   - !!inc/file layers/landuse-industrial.yml
   - !!inc/file layers/park.yml
-  - !!inc/file layers/landuse-cemetery.yml
-  - !!inc/file layers/landuse-hospital.yml
-  - !!inc/file layers/landuse-school.yml
-  - !!inc/file layers/landuse-railway.yml
-  

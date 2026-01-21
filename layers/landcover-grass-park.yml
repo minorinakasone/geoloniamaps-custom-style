@@ -10,5 +10,5 @@ filter:
 layout:
   visibility: visible
 paint:
-  fill-color: '#d8e8c8'
+  fill-color: '#f8f8fa'
   fill-opacity: 0.8
