@@ -413,192 +413,7 @@
             ]
           ]
         },
-        "hillshade-shadow-color": "#000000"
-      }
-    },
-    {
-      "id": "oc-waterway-river-ja",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "oc-waterway",
-      "minzoom": 4,
-      "maxzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "river"
-        ],
-        [
-          "!=",
-          [
-            "get",
-            "brunnel"
-          ],
-          "tunnel"
-        ],
-        [
-          "has",
-          "jflag"
-        ]
-      ],
-      "layout": {
-        "line-cap": "round"
-      },
-      "paint": {
-        "line-color": "#a0c8f0",
-        "line-width": [
-          "interpolate",
-          [
-            "exponential",
-            1.2
-          ],
-          [
-            "zoom"
-          ],
-          10,
-          0.8,
-          20,
-          6
-        ]
-      }
-    },
-    {
-      "id": "oc-waterway-river",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "oc-waterway",
-      "minzoom": 4,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "river"
-        ],
-        [
-          "!=",
-          [
-            "get",
-            "brunnel"
-          ],
-          "tunnel"
-        ],
-        [
-          "==",
-          [
-            "has",
-            "jflag"
-          ],
-          false
-        ]
-      ],
-      "layout": {
-        "line-cap": "round"
-      },
-      "paint": {
-        "line-color": "#a0c8f0",
-        "line-width": [
-          "interpolate",
-          [
-            "exponential",
-            1.2
-          ],
-          [
-            "zoom"
-          ],
-          10,
-          0.8,
-          20,
-          6
-        ]
-      }
-    },
-    {
-      "id": "oc-waterway-name-ja",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "oc-waterway",
-      "minzoom": 6,
-      "maxzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "has",
-          "name"
-        ],
-        [
-          "has",
-          "jflag"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": 14,
-        "text-field": "{name}",
-        "text-max-width": 5,
-        "text-rotation-alignment": "map",
-        "symbol-placement": "line",
-        "symbol-spacing": 350,
-        "text-letter-spacing": 0.2
-      },
-      "paint": {
-        "text-color": "#74aee9",
-        "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
-      }
-    },
-    {
-      "id": "oc-waterway-name",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "oc-waterway",
-      "minzoom": 6,
-      "filter": [
-        "all",
-        [
-          "has",
-          "name"
-        ],
-        [
-          "==",
-          [
-            "has",
-            "jflag"
-          ],
-          false
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": 14,
-        "text-field": "{name}",
-        "text-max-width": 5,
-        "text-rotation-alignment": "map",
-        "symbol-placement": "line",
-        "symbol-spacing": 350,
-        "text-letter-spacing": 0.2
-      },
-      "paint": {
-        "text-color": "#74aee9",
-        "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
+        "hillshade-shadow-color": "#f8f8fa"
       }
     },
     {
@@ -627,7 +442,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "#65cbf9"
+        "fill-color": "#C1A7E2"
       }
     },
     {
@@ -724,7 +539,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "#65cbf9"
+        "fill-color": "#C1A7E2"
       }
     },
     {
@@ -744,7 +559,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#85848c",
+        "line-color": "#C1A7E2",
         "line-width": [
           "interpolate",
           [
@@ -759,209 +574,6 @@
           1.5
         ],
         "line-blur": 0.4
-      }
-    },
-    {
-      "id": "oc-water-name-ocean",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "oc-water_name",
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "geometry-type"
-          ],
-          "Point"
-        ],
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "ocean"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": 14,
-        "text-field": "{name}",
-        "text-max-width": 5,
-        "text-rotation-alignment": "map",
-        "symbol-placement": "point",
-        "symbol-spacing": 350,
-        "text-letter-spacing": 0.2
-      },
-      "paint": {
-        "text-color": "#74aee9",
-        "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
-      }
-    },
-    {
-      "id": "oc-water-name-other",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "oc-water",
-      "minzoom": 6,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "geometry-type"
-          ],
-          "Polygon"
-        ],
-        [
-          "has",
-          "name"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          0,
-          10,
-          6,
-          14
-        ],
-        "text-field": "{name}",
-        "text-max-width": 5,
-        "text-rotation-alignment": "map",
-        "symbol-placement": "point",
-        "symbol-spacing": 350,
-        "text-letter-spacing": 0.2,
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "#74aee9",
-        "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
-      }
-    },
-    {
-      "id": "nt-water-name-ocean",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "nt-water-name",
-      "minzoom": 8,
-      "filter": [
-        "==",
-        [
-          "get",
-          "class"
-        ],
-        "ocean"
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": 14,
-        "text-field": "{name}",
-        "text-max-width": 5,
-        "text-rotation-alignment": "map",
-        "symbol-placement": "point",
-        "symbol-spacing": 350,
-        "text-letter-spacing": 0.2
-      },
-      "paint": {
-        "text-color": "#74aee9",
-        "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
-      }
-    },
-    {
-      "id": "nt-water-name-river",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "nt-water-name",
-      "minzoom": 13,
-      "filter": [
-        "==",
-        [
-          "get",
-          "class"
-        ],
-        "river"
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": 14,
-        "text-field": "{name}",
-        "text-max-width": 5,
-        "text-rotation-alignment": "map",
-        "symbol-placement": "point",
-        "symbol-spacing": 350,
-        "text-letter-spacing": 0.2
-      },
-      "paint": {
-        "text-color": "#74aee9",
-        "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
-      }
-    },
-    {
-      "id": "oc-airport",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "oc-airport",
-      "minzoom": 5,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "airport"
-        ],
-        [
-          "==",
-          [
-            "has",
-            "jflag"
-          ],
-          false
-        ]
-      ],
-      "layout": {
-        "text-padding": 2,
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-anchor": "top",
-        "icon-image": "airport",
-        "text-field": "{name}",
-        "text-offset": [
-          0,
-          0.6
-        ],
-        "text-size": 12,
-        "text-max-width": 9
-      },
-      "paint": {
-        "text-halo-blur": 0.5,
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "#ffffff"
       }
     },
     {
@@ -981,8 +593,8 @@
             ],
             "field"
           ],
-          "#F0E7D2",
-          "#E2EBCF"
+          "#f8f8fa",
+          "#f8f8fa"
         ],
         "fill-outline-color": [
           "case",
@@ -994,8 +606,8 @@
             ],
             "field"
           ],
-          "#eadcbb",
-          "#cedbb1"
+          "#f8f8fa",
+          "#f8f8fa"
         ]
       }
     }
